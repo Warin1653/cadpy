@@ -1,0 +1,7 @@
+cd "C:\cadpy"
+
+docker build -t cadpy .
+
+docker run -it --rm --name cadpy --volume "C:\cadpy:/home/jovyan/work" --volume "C:\Users\inccw\OneDrive - UWA\UWA_Analyst\data-cadpy:/home/jovyan/data" -p 8888:8888 cadpy start.sh bash
+
+jupyter notebook --port=8888 --no-browser --ip=*
