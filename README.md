@@ -8,9 +8,9 @@ This repository includes code to geometrically processing cadastral data into a 
 ## Setting up Docker environment
 Dockerfile contains all the Python packages needed to run the scripts above. These packages are also listed in requirements.txt. Follow the instructions below to set up the Docker environment.
 
-Using a command line interface, set the current working directory to the project root directory. Build the docker image with: docker build -t ccai-ground-truth .
+Using a command line interface, set the current working directory to the project root directory. Build the docker image with: docker build -t cadpy .
 
-Once the build has completed, run the docker image with: docker run --rm -p 8888:8888 -v "%cd%/ground-truth":/home/jovyan/work ccai-ground-truth
+Once the build has completed, run the docker image with: docker run --rm -p 8888:8888 -v "%cd%/ground-truth":/home/jovyan/work cadpy
 
 You should now be able to access the notebook server via a URL.
 
