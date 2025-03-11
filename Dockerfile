@@ -7,7 +7,11 @@ RUN mamba install --quiet --yes \
     'shapely' \
     'rtree' \
     'folium' \
-    'dask' \
+    'pysal' \
+    'pyarrow' \
+    'pygeos' \
+    'pyogrio' \
+    'dask=2025.2.0' \
     'dask-geopandas' && \
     mamba clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \

@@ -101,10 +101,3 @@ def spatial_join_largest_intersection(proj_crs, out_crs, left_df, right_df, id_c
     left_df = left_df.to_crs(out_crs)
 
     return left_df    
-
-
-def create_spatial_index(gdf):
-    idx = rtree.index.Index()
-    for i, geometry in enumerate(gdf.geometry):
-        idx.insert(i, geometry.bounds)
-    return idx       
